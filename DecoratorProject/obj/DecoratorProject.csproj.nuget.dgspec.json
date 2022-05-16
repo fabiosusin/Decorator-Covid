@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repositorio\\Decorator\\DecoratorProject\\DecoratorProject\\DecoratorProject.csproj": {}
+    "C:\\Repository\\Decorator-Covid\\DecoratorProject\\DecoratorProject.csproj": {}
   },
   "projects": {
-    "C:\\Repositorio\\Decorator\\DecoratorProject\\DecoratorProject\\DecoratorProject.csproj": {
+    "C:\\Repository\\Decorator-Covid\\DecoratorProject\\DecoratorProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repositorio\\Decorator\\DecoratorProject\\DecoratorProject\\DecoratorProject.csproj",
+        "projectUniqueName": "C:\\Repository\\Decorator-Covid\\DecoratorProject\\DecoratorProject.csproj",
         "projectName": "DecoratorProject",
-        "projectPath": "C:\\Repositorio\\Decorator\\DecoratorProject\\DecoratorProject\\DecoratorProject.csproj",
-        "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
-        "outputPath": "C:\\Repositorio\\Decorator\\DecoratorProject\\DecoratorProject\\obj\\",
+        "projectPath": "C:\\Repository\\Decorator-Covid\\DecoratorProject\\DecoratorProject.csproj",
+        "packagesPath": "C:\\Users\\XPlay\\.nuget\\packages\\",
+        "outputPath": "C:\\Repository\\Decorator-Covid\\DecoratorProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fabio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XPlay\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,12 +55,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.13, 5.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

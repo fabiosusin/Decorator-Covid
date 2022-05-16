@@ -7,6 +7,7 @@
         TotalDeaths,
         TotalRecovereds,
         TotalNewCases,
-        NewCasesLastDays,
+        TotalNewDeaths,
+        Close = 9
     }
 }
