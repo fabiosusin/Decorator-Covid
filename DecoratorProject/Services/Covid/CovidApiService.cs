@@ -1,0 +1,38 @@
+﻿using DecoratorProject.DTO.Enum;
+using DecoratorProject.DTO.Services.Covid.Output;
+using Services.Integration;
+using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Threading.Tasks;
+
+namespace DecoratorProject.Services.Covid
+{
+    internal class CovidApiService
+    {
+        private readonly ApiDispatcher _apiDispatcher;
+        private static readonly string BaseUrl = "https://api.covid19api.com";
+
+        public CovidApiService() => _apiDispatcher = new ApiDispatcher();
+
+        public async Task<CovidSummaryOutput> CovidSummary() => await SendRequest<CovidSummaryOutput>(RequestMethodEnum.GET, $"{ BaseUrl }/summary");
+
+        public async Task<List<CasesLastDaysOutput>> GetCasesLastDays(string country, string start, string end) => await SendRequest<List<CasesLastDaysOutput>>(RequestMethodEnum.GET, $"{ BaseUrl }/country/{country}/status/confirmed?from={start}&to={end}");
+
+        private static Tuple<HttpRequestHeader, string>[] DefaultHeaders(string token = null)
+        {
+            var result = new List<Tuple<HttpRequestHeader, string>> { new Tuple<HttpRequestHeader, string>(HttpRequestHeader.ContentType, "application/json") };
+
+            if (!string.IsNullOrEmpty(token))
+                result.Add(new Tuple<HttpRequestHeader, string>(HttpRequestHeader.Authorization, $"Bearer { token }"));
+
+            return result.ToArray();
+        }
+
+
+        private async Task<T> SendRequest<T>(RequestMethodEnum method, string url, object body = null)
+        {
+            try { return await _apiDispatcher.DispatchWithResponseAsync<T>(url, method, body, DefaultHeaders()); } catch { throw; }
+        }
+    }
+}
