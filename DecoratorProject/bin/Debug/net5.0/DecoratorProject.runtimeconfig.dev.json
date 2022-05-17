@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\XPlay\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\XPlay\\.nuget\\packages"
-    ]
-  }
-}

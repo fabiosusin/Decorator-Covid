@@ -1,5 +1,6 @@
 ﻿using DecoratorProject.DTO.Services.Covid.Output;
 using DecoratorProject.Services.Covid;
+using System;
 using System.Threading.Tasks;
 
 namespace DecoratorProject.Services.Decorator.Decorator
@@ -16,6 +17,7 @@ namespace DecoratorProject.Services.Decorator.Decorator
                 return null;
 
             result.Result = new(result.Global);
+            Console.WriteLine(result.Result.TotalConfirmed);
             return result;
         }
     }

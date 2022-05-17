@@ -6,7 +6,7 @@ namespace DecoratorProject
     {
         static void Main()
         {
-            new MainView().MainAsync();
+            _ = MainView.Main();
         }
     }
 }

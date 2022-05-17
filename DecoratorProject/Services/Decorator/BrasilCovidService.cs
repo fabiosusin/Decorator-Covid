@@ -1,5 +1,6 @@
 ﻿using DecoratorProject.DTO.Services.Covid.Output;
 using DecoratorProject.Services.Covid;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace DecoratorProject.Services.Decorator.Decorator
                 return null;
 
             result.Result = new(result?.Countries?.FirstOrDefault(x => x.CountryCode == "BR"));
+            Console.WriteLine(result.Result.TotalConfirmed);
             return result;
         }
     }
