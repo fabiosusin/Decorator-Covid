@@ -18,7 +18,6 @@ namespace DecoratorProject.Services.Decorator.Decorator
                 return null;
 
             result.Result = new(result?.Countries?.FirstOrDefault(x => x.CountryCode == "BR"));
-            Console.WriteLine(result.Result.TotalConfirmed);
             return result;
         }
     }

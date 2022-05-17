@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DecoratorProject.Services.Covid
 {
-    internal class CovidApiService
+    public class CovidApiService
     {
         private readonly ApiDispatcher _apiDispatcher;
         private static readonly string BaseUrl = "https://api.covid19api.com";

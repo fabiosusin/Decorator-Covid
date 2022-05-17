@@ -20,16 +20,6 @@ namespace Services.Integration
             };
         }
 
-        public async Task<string> DispatchWithResponseUnDeserializeAsync(
-            string url,
-            RequestMethodEnum method,
-            object body = null,
-            Tuple<HttpRequestHeader, string>[] headers = null,
-            Tuple<string, string>[] customHeaders = null)
-        {
-            return await SendRequestAsync(url, method, body, headers, customHeaders);
-        }
-
         public async Task<T> DispatchWithResponseAsync<T>(
             string url,
             RequestMethodEnum method,
